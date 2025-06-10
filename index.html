@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Infographic generated based on student report. Date: 2025-05-30. Image section updated. -->
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -127,6 +128,7 @@
                     
                     <div class="mb-10">
                         <h4 class="text-lg font-semibold mb-3 text-center">Q. 생성형 AI 주요 사용 목적 (중복응답 가능)</h4>
+                        <!-- CHART: Generation AI Usage Purpose -->
                         <div class="chart-container w-full max-w-2xl mx-auto h-96 md:h-[450px]">
                             <canvas id="purposeChart"></canvas>
                         </div>
@@ -142,6 +144,7 @@
 
                     <div class="mb-10">
                         <h4 class="text-lg font-semibold mb-3 text-center">Q. 생성형 AI 사용, 재미있다고 생각하나요?</h4>
+                         <!-- CHART: Is Using Generative AI Fun? -->
                         <div class="chart-container w-full max-w-sm mx-auto h-72 md:h-80">
                             <canvas id="funChart"></canvas>
                         </div>
@@ -157,6 +160,7 @@
                     
                     <div>
                         <h4 class="text-lg font-semibold mb-3 text-center">Q. 생성형 AI 사용 시 가장 걱정되거나 조심해야 할 점은? (중복응답 가능)</h4>
+                        <!-- CHART: Concerns about using Generative AI -->
                         <div class="chart-container w-full max-w-2xl mx-auto h-96 md:h-[450px]">
                             <canvas id="concernsChart"></canvas>
                         </div>
@@ -172,12 +176,28 @@
                 </article>
 
                 <article class="card">
-                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-primary-blue">나. 인터뷰 결과 요약</h3>
-                    <div class="space-y-4 text-base">
-                        <p>심층 인터뷰 결과, 학생들은 생성형 AI의 장점을 잘 활용하면서도 단점을 의식하고 있는 것으로 나타났다. 특히 영어 본문 해석이나 AI로부터 피드백을 받는 상황에서 유용하다고 응답했다.</p>
-                        <p>반면, 생성형 AI 사용 시 가장 불편한 점으로는 사용자의 의도대로 답변이 나오지 않거나, 원하는 양보다 더 많은 정보가 제공되는 것, 그리고 정보의 정확성에 대한 불신 등이 언급되었다.</p>
-                        <p>학생들은 생성형 AI를 효과적으로 사용하기 위해 프롬프트를 자세히 작성하고, AI가 생성한 답변이 프롬프트의 의도에 맞게 나왔는지 확인하는 과정이 중요하다고 인식하고 있었다.</p>
-                        <p class="font-semibold">종합적으로, 학생들은 생성형 AI의 빠른 응답 속도와 다양한 정보 제공 능력에는 만족하지만, 여전히 정확성과 사용자 의도 반영 측면에서는 개선이 필요하다고 느끼고 있었다.</p>
+                    <h3 class="text-xl md:text-2xl font-bold mb-6 text-primary-blue">나. 심층 인터뷰 결과</h3>
+                    <p class="mb-8 text-base text-center text-gray-700">학생들은 생성형 AI의 빠른 응답 속도와 정보 제공 능력에는 만족하지만, 정확성과 사용자 의도 반영 측면에서는 개선이 필요하다고 느끼고 있었습니다. 효과적인 사용을 위해 프롬프트 작성의 중요성과 결과물 검증의 필요성을 인식하고 있었습니다.</p>
+                    
+                    <!-- Individual Interview Sections -->
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Interview 1: Park Jiwoo -->
+                        <div class="flex flex-col items-center text-center p-4 border rounded-lg">
+                             <!-- User-requested image. Using a placeholder. Replace src with actual image URL. -->
+                             <!-- 원본 요청 경로: src/park 2025-06-10 .png -->
+                             <img src="src/park 2025-06-10 .png" alt="박지우 학생 인터뷰 사진" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                            <h4 class="text-lg font-bold text-primary-blue">박지우 학생</h4>
+                            <p class="mt-2 text-sm italic">"생성형 AI의 장점을 잘 활용하면서도 단점을 의식하려고 노력해요."</p>
+                        </div>
+
+                        <!-- Interview 2: Kang Jiyoon -->
+                        <div class="flex flex-col items-center text-center p-4 border rounded-lg">
+                            <!-- User-requested image. Using a placeholder. Replace src with actual image URL. -->
+                            <!-- 원본 요청 경로: src/IMG_8748.jpg -->
+                            <img src="src/IMG_8748.jpg" alt="강지윤 학생 인터뷰 사진" class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                            <h4 class="text-lg font-bold text-primary-blue">강지윤 학생</h4>
+                            <p class="mt-2 text-sm italic">"AI의 위험성을 인식하고, 조심하면서도 그 이점을 파악하려고 노력하고 있어요."</p>
+                        </div>
                     </div>
                 </article>
             </section>
@@ -279,9 +299,8 @@
                     ticks: {
                         font: { family: "'Noto Sans KR', sans-serif", size: 11 },
                         callback: function(value, index, values) {
-                            // For bar charts, 'value' is the data value, 'index' is the index of the label
-                            const label = this.getLabelForValue(value); // For category scale, value is index
-                            return formatLabel(label, 10, 2); // Adjust maxWidth for x-axis
+                            const label = this.getLabelForValue(value);
+                            return formatLabel(label, 10, 2);
                         },
                         autoSkip: false,
                         maxRotation: 0,
@@ -294,12 +313,11 @@
                     ticks: {
                         font: { family: "'Noto Sans KR', sans-serif", size: 11 },
                         callback: function(value, index, values) {
-                             // For horizontal bar charts, this is the category axis
                             if (this.chart.config.type === 'bar' && this.chart.config.options.indexAxis === 'y') {
                                 const label = this.getLabelForValue(value);
-                                return formatLabel(label, 20, 2); // Adjust maxWidth for y-axis labels
+                                return formatLabel(label, 20, 2);
                             }
-                            return value + '%'; // For regular y-axis values
+                            return value + '%';
                         }
                     },
                     grid: { color: '#e0e0e0', borderDash: [2,3] }
@@ -319,7 +337,7 @@
                                 const label = this.getLabelForValue(value);
                                 return formatLabel(label, 12, 2);
                             },
-                             maxRotation: 45, // Allow rotation for longer labels if needed
+                             maxRotation: 45,
                              minRotation: 0,
                              autoSkipPadding: 10
                         },
@@ -334,7 +352,7 @@
                         },
                         grid: { color: '#e0e0e0', borderDash: [2,3] }
                     }
-                } : { // indexAxis === 'y' (horizontal bar chart)
+                } : { // indexAxis === 'y'
                     x: {
                         beginAtZero: true,
                         max: 100,
@@ -349,9 +367,9 @@
                             font: { family: "'Noto Sans KR', sans-serif", size: 11 },
                             callback: function(value) {
                                 const label = this.getLabelForValue(value);
-                                return formatLabel(label, 20, 2); // Increased maxWidth for horizontal bar labels
+                                return formatLabel(label, 20, 2);
                             },
-                            autoSkip: false, // Ensure all labels are shown
+                            autoSkip: false,
                          },
                          grid: { display: false }
                     }
@@ -364,7 +382,7 @@
             // Chart 1: 생성형 AI 사용 목적
             const purposeCtx = document.getElementById('purposeChart').getContext('2d');
             new Chart(purposeCtx, {
-                type: 'bar', // Horizontal bar chart
+                type: 'bar',
                 data: {
                     labels: [
                         '정보 검색 및 요약', 
@@ -379,12 +397,12 @@
                     datasets: [{
                         label: '응답 비율 (%)',
                         data: [83.3, 61.1, 61.1, 33.3, 22.2, 22.2, 5.6, 0],
-                        backgroundColor: 'rgba(42, 98, 182, 0.7)', // primary-blue with opacity
+                        backgroundColor: 'rgba(42, 98, 182, 0.7)',
                         borderColor: 'rgba(42, 98, 182, 1)',
                         borderWidth: 1
                     }]
                 },
-                options: commonBarChartOptions('y') // 'y' for horizontal bar chart
+                options: commonBarChartOptions('y')
             });
 
             // Chart 2: 생성형 AI 사용 재미 여부
@@ -403,9 +421,9 @@
                         label: '응답 비율 (%)',
                         data: [22.2, 50, 11.1, 11.1, 5.6],
                         backgroundColor: [
-                            'rgba(78, 205, 196, 0.8)',  // secondary-teal
+                            'rgba(78, 205, 196, 0.8)',
                             'rgba(78, 205, 196, 0.6)',
-                            'rgba(169, 169, 169, 0.7)', // accent-grey
+                            'rgba(169, 169, 169, 0.7)',
                             'rgba(169, 169, 169, 0.5)',
                             'rgba(169, 169, 169, 0.3)'
                         ],
@@ -421,25 +439,24 @@
                 },
                 options: {
                     ...commonChartOptions,
-                    scales: { x: { display: false }, y: { display: false } }, // No scales for doughnut
+                    scales: { x: { display: false }, y: { display: false } },
                     plugins: {
                         ...commonChartOptions.plugins,
-                        legend: { // Customize legend for doughnut if needed
+                        legend: {
                             position: 'bottom',
                              labels: {
                                 font: { family: "'Noto Sans KR', sans-serif", size: 11 },
                                 padding: 10,
                                 boxWidth: 12,
-                                 // Custom label formatter for legend to wrap text
                                 generateLabels: function(chart) {
                                     const data = chart.data;
                                     if (data.labels.length && data.datasets.length) {
                                         return data.labels.map(function(label, i) {
                                             const meta = chart.getDatasetMeta(0);
                                             const style = meta.controller.getStyle(i);
-                                            const lines = formatLabel(label, 15, 2); // Wrap legend labels
+                                            const lines = formatLabel(label, 15, 2);
                                             return {
-                                                text: lines, // text can be an array of strings
+                                                text: lines,
                                                 fillStyle: style.backgroundColor,
                                                 strokeStyle: style.borderColor,
                                                 lineWidth: style.borderWidth,
@@ -459,7 +476,7 @@
             // Chart 3: 생성형 AI 사용 시 걱정되는 점
             const concernsCtx = document.getElementById('concernsChart').getContext('2d');
             new Chart(concernsCtx, {
-                type: 'bar', // Horizontal bar chart
+                type: 'bar',
                 data: {
                     labels: [
                         '생성된 정보가 틀리거나 사실과 다를까봐', 
@@ -473,14 +490,15 @@
                     datasets: [{
                         label: '응답 비율 (%)',
                         data: [66.7, 38.9, 33.3, 22.2, 22.2, 5.6, 0],
-                        backgroundColor: 'rgba(42, 98, 182, 0.7)', // primary-blue with opacity
+                        backgroundColor: 'rgba(42, 98, 182, 0.7)',
                         borderColor: 'rgba(42, 98, 182, 1)',
                         borderWidth: 1
                     }]
                 },
-                options: commonBarChartOptions('y') // 'y' for horizontal bar chart
+                options: commonBarChartOptions('y')
             });
         });
     </script>
 </body>
+<!-- 인포그래픽 자동 생성 완료. 최종 검토 필요. -->
 </html>
